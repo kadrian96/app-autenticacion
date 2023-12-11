@@ -1,5 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
 import { NavigationContainer } from '@react-navigation/native';
+
+
 import LoginScreen from '../screens/LoginScreen';
 import RegistroScreen from '../screens/RegistroScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
@@ -12,9 +16,19 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Registro" component={RegistroScreen} />
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="General" component={GeneralScreen} />
+      <Stack.Screen name="Welcome" component={MyDrawer} />
     </Stack.Navigator>
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+        <Drawer.Screen name="General" component={GeneralScreen} />
+        <Drawer.Screen name='Recursos' component={RegistroScreen}/>
+    </Drawer.Navigator>
   );
 }
 

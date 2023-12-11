@@ -4,10 +4,17 @@ import React from 'react'
 export default function LoginScreen({navigation}: any) {
   return (
     <View>
-      <Text>LoginScreen</Text>
-      <Button title='Ingresar' onPress={()=> navigation.navigate('General') }/>
+      <Text style={{fontSize:30}}>Login</Text>
+     
+      <Button title='Ingresar' onPress={()=> navigation.navigate('Welcome') }/>
+
+      <Text onPress={()=> navigation.navigate('Registro')}> 👉 Regístrate aquí 👈</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+
+  }
+})
