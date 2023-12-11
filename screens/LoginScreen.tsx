@@ -6,7 +6,7 @@ export default function LoginScreen({navigation}: any) {
     <View>
       <Text style={{fontSize:30}}>Login</Text>
      
-      <Button title='Ingresar' onPress={()=> navigation.navigate('Welcome') }/>
+      <Button title='Ingresar' onPress={()=> navigation.navigate('Drawer_Welcome') }/>
 
       <Text onPress={()=> navigation.navigate('Registro')}> 👉 Regístrate aquí 👈</Text>
     </View>

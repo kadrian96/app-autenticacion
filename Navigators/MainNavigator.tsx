@@ -16,7 +16,7 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Registro" component={RegistroScreen} />
-      <Stack.Screen name="Welcome" component={MyDrawer} />
+      <Stack.Screen name="Drawer_Welcome" component={MyDrawer} />
     </Stack.Navigator>
   );
 }
@@ -26,6 +26,7 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator>
+         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Drawer.Screen name="General" component={GeneralScreen} />
         <Drawer.Screen name='Recursos' component={RegistroScreen}/>
     </Drawer.Navigator>
